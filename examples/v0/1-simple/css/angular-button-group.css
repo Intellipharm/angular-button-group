@@ -1,0 +1,18 @@
+.angular-button-group .confirm-message {
+  color: #6B2B00;
+  text-align: center;
+}
+.angular-button-group > .group {
+  margin-bottom: 5px;
+}
+.angular-button-group > .group.disabled {
+  pointer-events: none;
+}
+.angular-button-group > .group.disabled .btn {
+  border-color: #b3b3b3;
+  background-color: #cccccc;
+  color: #999999;
+}
+.angular-button-group .btn-group > button {
+  width: 50%;
+}

@@ -1,0 +1,9 @@
+button {
+  width: 100%;
+}
+@media (min-width: 800px) {
+  margin-bottom: 10px;
+  button.edit {
+    display: none;
+  }
+}
