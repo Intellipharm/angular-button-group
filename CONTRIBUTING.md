@@ -1,6 +1,6 @@
 # Issues
 
-Think you've found a bug or have a new feature to suggest? [Let us know!](https://github.com/Intellipharm/angular-svg-nodes/issues)
+Think you've found a bug or have a new feature to suggest? [Let us know!](https://github.com/Intellipharm/angular-button-group/issues)
 
 ## Reporting a Bug
 1. Update to the most recent master release if possible. We may have already
@@ -55,7 +55,7 @@ a test!
 5. Build the dist folder following RELEASE.md
 
 4. Commit your changes. Please use an appropriate commit prefix.
-If your pull request fixes an issue specify it in the commit message. 
+If your pull request fixes an issue specify it in the commit message.
 
 5. Push to your fork and submit a pull request. Please provide us with some
 explanation of why you made the changes you made. For new features make sure to
