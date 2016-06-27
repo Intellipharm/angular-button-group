@@ -9,8 +9,16 @@ Configurable AngularJS button group, with lots of features.
 
 ## Installation
 
-coming soon...
+```
+jspm install github:Intellipharm/angular-button-group
+```
 
 ## Getting Started
 
-coming soon...
+```
+import AngularButtonGroup from 'angular-button-group';
+
+var module = angular.module('YourApp', [
+    AngularButtonGroup.name
+]);
+```
