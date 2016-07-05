@@ -73,6 +73,7 @@ export default class AngularButtonGroupController {
      */
     onClick(button_key) {
 
+        let _is_confirmed = null;
         let _config = Object.assign({}, this.buttons_config[ button_key ]);
 
         // enable
@@ -113,7 +114,7 @@ export default class AngularButtonGroupController {
 
         // external handler
         if (!_.isNull(_config.callback)) {
-            _config.callback(_config, _config.busy_confirming);
+            _config.callback(_config, _config.busy_confirming, _is_confirmed);
         }
     }
 
@@ -124,6 +125,7 @@ export default class AngularButtonGroupController {
      */
     onYesClick(button_key) {
 
+        let _is_confirmed = true;
         let _config = Object.assign({}, this.buttons_config[ button_key ]);
 
         _config.show_confirm_group = false;
@@ -140,7 +142,7 @@ export default class AngularButtonGroupController {
 
         // external handler
         if (!_.isNull(_config.callback)) {
-            _config.callback(_config, false, true);
+            _config.callback(_config, _config.busy_confirming, _is_confirmed);
         }
     }
 
@@ -151,6 +153,7 @@ export default class AngularButtonGroupController {
      */
     onNoClick(button_key) {
 
+        let _is_confirmed = false;
         let _config = Object.assign({}, this.buttons_config[ button_key ]);
 
         // disable others?
@@ -167,7 +170,7 @@ export default class AngularButtonGroupController {
 
         // external handler
         if (!_.isNull(_config.callback)) {
-            _config.callback(_config, false, true);
+            _config.callback(_config, _config.busy_confirming, _is_confirmed);
         }
     }
 

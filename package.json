@@ -1,7 +1,7 @@
 {
   "name": "angular-button-group",
   "version": "0.0.2",
-  "main": "dist/js/angular-button-group.min.js",
+  "main": "dist/angular-button-group.js",
   "scripts": {
     "postinstall": "jspm install"
   },
@@ -11,7 +11,7 @@
   "dependencies": {},
   "repository": {
     "type": "git",
-    "url": "git://github.com/Intellipharm/angular-cakephp.git"
+    "url": "git://github.com/Intellipharm/angular-button-group.git"
   },
   "devDependencies": {
     "babel-core": "^6.6.4",
