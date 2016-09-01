@@ -68,6 +68,7 @@ var AngularButtonGroupController = function () {
         key: "onClick",
         value: function onClick(button_key) {
 
+            var _is_confirmed = null;
             var _config = Object.assign({}, this.buttons_config[button_key]);
 
             _config.disabled = false;
@@ -100,13 +101,14 @@ var AngularButtonGroupController = function () {
             this.buttons_config[button_key] = _config;
 
             if (!_.isNull(_config.callback)) {
-                _config.callback(_config, _config.busy_confirming);
+                _config.callback(_config, _config.busy_confirming, _is_confirmed);
             }
         }
     }, {
         key: "onYesClick",
         value: function onYesClick(button_key) {
 
+            var _is_confirmed = true;
             var _config = Object.assign({}, this.buttons_config[button_key]);
 
             _config.show_confirm_group = false;
@@ -120,13 +122,14 @@ var AngularButtonGroupController = function () {
             this.buttons_config[button_key] = _config;
 
             if (!_.isNull(_config.callback)) {
-                _config.callback(_config, false, true);
+                _config.callback(_config, _config.busy_confirming, _is_confirmed);
             }
         }
     }, {
         key: "onNoClick",
         value: function onNoClick(button_key) {
 
+            var _is_confirmed = false;
             var _config = Object.assign({}, this.buttons_config[button_key]);
 
             if (_config.disable_others) {
@@ -140,7 +143,7 @@ var AngularButtonGroupController = function () {
             this.buttons_config[button_key] = _config;
 
             if (!_.isNull(_config.callback)) {
-                _config.callback(_config, false, true);
+                _config.callback(_config, _config.busy_confirming, _is_confirmed);
             }
         }
     }, {
